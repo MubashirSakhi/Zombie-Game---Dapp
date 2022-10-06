@@ -1,0 +1,52 @@
+.Modal {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 70%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 15%;
+    top: 30%;
+    min-height:350px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+  border-radius:20px;
+}
+.zombieParts{ 
+  position: relative;
+  margin-left: -2vh;
+}
+.zombieLoading{
+  background: url('https://cryptozombies.io/course/static/img/zombierun.png') 0;
+  background-size: auto;
+  background-size: cover;
+  height: 287px;
+  width: 192px;
+  position: absolute;
+  left: 12vh;
+  -webkit-animation:  .7s steps(24) infinite;
+  animation:zombiemoves .7s steps(24) infinite;
+}
+@keyframes zombiemoves {
+ to {
+  background-position:-4608px
+ }
+}
+.ErrorMessage{
+  min-height:300px;
+  height:300px;
+  display:table;
+}
+.ErrorMessage p{
+  display: table-cell;
+  vertical-align: middle;
+  font-size:32px;
+  font-weight:bold;
+}
+@media (min-width: 600px) {
+    .Modal {
+        width: 700px;
+        left: calc(50% - 350px);
+    }
+}
